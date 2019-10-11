@@ -1,0 +1,10 @@
+Common AssessmentCustomization
+    documentation "An un-typed key/value pair used to customize an assessment or provide additional information needed for vendor reporting"
+    shared string EdFi.IdentificationCode
+        documentation "An agreed upon code identifying the value for customization or reporting"
+        is part of identity
+    string CustomizationValue
+        documentation "The value indicated for customization or reporting"
+        is required
+        min length 1
+        max length 1024

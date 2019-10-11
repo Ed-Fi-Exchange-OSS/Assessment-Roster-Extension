@@ -1,0 +1,21 @@
+Domain Entity AssessmentAdministration
+    documentation "The anticipated administration of an assessment under the purview of an EducationOrganization."
+    domain entity EdFi.EducationOrganization
+        documentation "A reference to the education organization which contracts for or administers an assessment."
+        is part of identity
+        role name Assigning
+        is queryable field
+    domain entity EdFi.Assessment
+        documentation "A reference to the assessment."
+        is part of identity
+        is queryable field
+    shared string EdFi.AssessmentTitle named AdministrationIdentifier
+        documentation "The title or name of the assessment in the context of it's administration."
+        is part of identity
+        is queryable field
+    common EdFi.Period
+        documentation "The anticipated dates or administration window"
+        is optional collection
+    common AdministrationContact
+        documentation "Pre-identified contacts for education organizations administering the assessment"
+        is optional collection

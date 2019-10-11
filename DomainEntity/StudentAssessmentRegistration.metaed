@@ -1,0 +1,44 @@
+Domain Entity StudentAssessmentRegistration
+    documentation "Identifies a student who is expected to participate in particular assessment."
+    domain entity AssessmentAdministration
+        documentation "A reference to the expected administration of an assessment."
+        is part of identity
+        is queryable field
+    association EdFi.StudentEducationOrganizationAssociation
+        documentation "A reference to the attending student education organization association."
+        is part of identity
+        is queryable field
+    domain entity EdFi.EducationOrganization
+        documentation "A reference to the education organization expected to administer the assessment."
+        is part of identity
+        role name Testing
+        is queryable field
+    domain entity EdFi.EducationOrganization
+        documentation "A reference to the education organization which should receive the reults of the assessment."
+        is part of identity
+        role name Reporting
+        is queryable field
+    descriptor EdFi.AdministrationEnvironment
+        documentation "The environment or format in which the assessment is expected to be administred"
+        is optional
+    descriptor EdFi.Sex
+        documentation "The student's sex if needed to support vendor reporting/analysis"
+        is optional
+        role name Reporting
+    descriptor EdFi.Race
+        documentation "The student's race if needed to support vendor reporting/analysis"
+        is optional
+        role name Reporting
+    bool ReportingHispanicLatinoEthnicity
+        documentation "The student's indication of Hispanic/Latino Ethnicity if needed to support vendor reporting/analysis"
+        is optional
+    bool ReportingEconomicDisadvantaged
+        documentation "An indication of inadequate financial condition of a student's family if needed to support vendor reporting/analysis"
+        is optional
+    descriptor EdFi.LimitedEnglishProficiency
+        documentation "The student's limited English proficiency if needed to support vendor reporting/analysis"
+        is optional
+        role name Reporting
+    common AssessmentCustomization
+        documentation "Key/value pairs which may be used to facilitate customization of an assessment or to support vendor reporting/analysis"
+        is optional collection
