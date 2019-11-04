@@ -39,6 +39,10 @@ Domain Entity StudentAssessmentRegistration
         documentation "The student's limited English proficiency if needed to support vendor reporting/analysis"
         is optional
         role name Reporting
+    descriptor EdFi.Disability
+        documentation "The student's disability if needed to support vendor reporting/analysis"
+        is optional
+        role name Reporting
     common AssessmentCustomization
         documentation "Key/value pairs which may be used to facilitate customization of an assessment or to support vendor reporting/analysis"
         is optional collection
