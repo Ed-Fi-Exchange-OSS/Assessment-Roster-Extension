@@ -10,12 +10,12 @@ Domain Entity StudentAssessmentRegistration
         is queryable field
     domain entity EdFi.EducationOrganization
         documentation "A reference to the education organization expected to administer the assessment."
-        is part of identity
+        is optional
         role name Testing
         is queryable field
     domain entity EdFi.EducationOrganization
         documentation "A reference to the education organization which should receive the reults of the assessment."
-        is part of identity
+        is optional
         role name Reporting
         is queryable field
     descriptor EdFi.AdministrationEnvironment

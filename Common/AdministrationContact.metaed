@@ -15,3 +15,7 @@ Common AdministrationContact
     shared string EdFi.IdentificationCode named LoginId
         documentation "The login ID for the user; used for security access control interface."
         is optional
+    common EdFi.Address
+        documentation "The address for shipping assessment materials"
+        is optional
+        role name Shipping
