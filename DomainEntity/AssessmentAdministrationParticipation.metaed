@@ -1,0 +1,17 @@
+// SPDX-License-Identifier: Apache-2.0
+// Licensed to the Ed-Fi Alliance under one or more agreements.
+// The Ed-Fi Alliance licenses this file to you under the Apache License, Version 2.0.
+// See the LICENSE and NOTICES files in the project root for more information.
+
+Domain Entity AssessmentAdministrationParticipation
+    documentation "The anticipated administration of an assessment under the purview of an EducationOrganization."
+    domain entity AssessmentAdministration
+        documentation "A reference to the assessment administration for which participation is being indicated."
+        is part of identity
+    domain entity EdFi.EducationOrganization
+        documentation "A reference to the education organization for which participation is being indicated."
+        is part of identity
+        role name Participating
+    common AdministrationContact
+        documentation "Pre-identified contacts for education organizations administering the assessment"
+        is optional collection

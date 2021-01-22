@@ -18,6 +18,4 @@ Domain Entity AssessmentAdministration
     common EdFi.Period
         documentation "The anticipated dates or administration window"
         is optional collection
-    common AdministrationContact
-        documentation "Pre-identified contacts for education organizations administering the assessment"
-        is optional collection
+  
