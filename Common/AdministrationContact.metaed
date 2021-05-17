@@ -5,9 +5,6 @@
 
 Common AdministrationContact
     documentation "A lightweight contact which identifies a user that will serve as point of contact for the administration of an assessment within an Education Organization."
-    domain entity EdFi.EducationOrganization
-        documentation "A reference to the education organization."
-        is part of identity
     shared string EdFi.ElectronicMailAddress
         documentation "The email address for the contact."
         is part of identity
